@@ -78,13 +78,12 @@ class Config
     {
         switch ($type) {
             case 'obfs':
-                $list = array('plain', 'http_simple', 'http_simple_compatible', 'http_post', 'http_post_compatible',
+                $list = array('http_post', 'http_post_compatible',
                             'tls1.2_ticket_auth', 'tls1.2_ticket_auth_compatible', 'tls1.2_ticket_fastauth', 'tls1.2_ticket_fastauth_compatible',
                             'simple_obfs_http', 'simple_obfs_http_compatible', 'simple_obfs_tls', 'simple_obfs_tls_compatible');
                 return $list;
             case 'protocol':
-                $list = array('origin', 'verify_deflate',
-                            'auth_sha1_v4', 'auth_sha1_v4_compatible', 'auth_aes128_sha1', 'auth_aes128_md5', 'auth_chain_a', 'auth_chain_b');
+                $list = array('auth_aes128_sha1', 'auth_aes128_md5', 'auth_chain_a', 'auth_chain_b');
                 return $list;
             case 'allow_none_protocol':
                 $list = array('auth_chain_a', 'auth_chain_b');
